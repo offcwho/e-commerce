@@ -22,6 +22,7 @@
 		<meta name="twitter:image" content="https://example.com/image.jpg" />
 		<meta name="language" content="ru" />
 		<meta name="robots" content="index, nofollow" />
+		<link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
 		<link rel="stylesheet" href="./css/main.css" />
 		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
 		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
@@ -31,72 +32,214 @@
 			<div class="container header__container">
 				<div class="header__row header__row--top">
 					<div class="header__left">
+						<!-- start logo -->
 						<div class="header__logo logo">
-							<a href="" class="logo__link">
-								<img src="./img/Group 5954.svg" alt="" class="logo__brand" />
+							<a href="index.html" class="logo__link">
+								<img src="./img/logo.svg" alt="Логотип компании" class="logo__brand" />
 								<span class="logo__name">ТОВАРЫ ДЛЯ ДОМА, ДАЧИ И&#160;РЕМОНТА</span>
 							</a>
 						</div>
+						<!-- end logo -->
 					</div>
 					<div class="header__right">
 						<nav class="header__navbar navbar" id="navbar-primary">
 							<menu class="navbar__menu">
-								<li class="navbar__menu-item">
-									<a href="" title="Главная" class="navbar__menu-link">Главная</a>
-								</li>
-								<li class="navbar__menu-item">
-									<a href="" title="О магазине" class="navbar__menu-link">О&#160;магазине</a>
-								</li>
-								<li class="navbar__menu-item">
-									<a href="" title="Оплата и доставка" class="navbar__menu-link">Оплата и&#160;доставка</a>
-								</li>
-								<li class="navbar__menu-item">
-									<a href="" title="Гарантия и возврат" class="navbar__menu-link">Гарантия и&#160;возврат</a>
-								</li>
-								<li class="navbar__menu-item">
-									<a href="" title="Контакты" class="navbar__menu-link">Контакты</a>
-								</li>
+								<li class="navbar__menu-item"><a href="#!" title="Главная" class="navbar__menu-link">Главная</a></li>
+								<li class="navbar__menu-item"><a href="#!" title="О магазине" class="navbar__menu-link">О&#160;магазине</a></li>
+								<li class="navbar__menu-item"><a href="#!" title="Оплата и доставка" class="navbar__menu-link">Оплата и&#160;доставка</a></li>
+								<li class="navbar__menu-item"><a href="#!" title="Гарантия и возврат" class="navbar__menu-link">Гарантия и&#160;возврат</a></li>
+								<li class="navbar__menu-item"><a href="#!" title="Контакты" class="navbar__menu-link">Контакты</a></li>
 							</menu>
 						</nav>
 					</div>
 				</div>
 				<div class="header__row header__row--bottom">
 					<div class="header__tool">
-						<button class="header__button-megaMenu button button--primary">
-							каталог
-						</button>
+						<button class="header__button-megaMenu header__button-megaMenu--is-active button button--primary">Каталог</button>
 					</div>
+					<!-- start search -->
 					<div class="header__search">
 						<form class="header__search-form">
 							<div class="header__search-item">
 								<button class="header__search-button">
-									<svg class="icon icon--example">
-										<use href="./img/svgsprite/sprite.symbol.svg#search"></use>
+									<svg class="header__search-buttonIcon  icon icon--example">
+										<use href="./img/svgsprite/sprite.symbol.svg#search-line"></use>
 									</svg>
 								</button>
-								<input type="text" class="header__search-input input" placeholder="Поиск в БЫСТРОЙКА" />
+								<input type="search" class="header__search-input input" placeholder="Поиск в БЫСТРОЙКА" />
 							</div>
 						</form>
 					</div>
+					<!-- start end -->
+					<!-- start actions -->
 					<div class="header__actions">
-						<a href="tel:+78004501010" class="header__actions-phone">8 800 450 10 10</a>
+						<a href="tel:+78004501010" class="header__action-phone">8 800 450 10 10</a>
 						<button class="header__button-modal button button--outline">Заказать звонок</button>
 						<ul class="header__actions-list">
 							<li class="header__actions-listItem">
-								<a href="#!" title="Корзина" class="header__actions-listLink">
-									<svg class="icon icon--example">
-										<use href="./img/svgsprite/sprite.symbol.svg#cart"></use>
-									</svg>
+								<a title="Корзина товаров" href="#!" class="header__actions-listLink header__actions-listLink--cart">
+									<i class="ri-shopping-cart-line"></i>
 								</a>
 							</li>
 							<li class="header__actions-listItem">
-								<a href="#!" title="Избранные товары" class="header__actions-listLink">
-									<svg class="icon icon--example">
-										<use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
-									</svg>
+								<a title="Избранные товары" href="#!" class="header__actions-listLink header__actions-listLink--favorits">
+									<i class="ri-heart-line"></i>
 								</a>
 							</li>
 						</ul>
+					</div>
+					<!-- end actions -->
+				</div>
+			</div>
+			<div class="mega-menu" id="mega-menu">
+				<div class="mega-menu__wrapper">
+					<div class="container mega-menu__container">
+						<div class="mega-menu__content">
+							<ul class="mega-menu__grid">
+								<!-- карточка категории -->
+								<li class="mega-menu__grid-item">
+									<div class="mega-menu__grid-card">
+										<a title="Инструменты" href="#!" class="mega-menu__grid-cardLink">
+											<div class="mega-menu__grid-cardContent">
+												<picture>
+													<source srcset="./img/category-img-1.webp 1x, ./img/category-img-1@2x.webp 2x" type="image/webp" />
+													<source srcset="./img/category-img-1.png 1x, ./img/category-img-1@2x.png 2x" type="image/png" />
+													<img loading="lazy" src="./img/category-img-1.png" alt="Изображение категории инструменты" class="mega-menu__grid-cardImg" />
+												</picture>
+												<div class="mega-menu__grid-cardName">Инструменты (1251)</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li class="mega-menu__grid-item">
+									<div class="mega-menu__grid-card">
+										<a title="Инструменты" href="#!" class="mega-menu__grid-cardLink">
+											<div class="mega-menu__grid-cardContent">
+												<picture>
+													<source srcset="./img/category-img-1.webp 1x, ./img/category-img-1@2x.webp 2x" type="image/webp" />
+													<source srcset="./img/category-img-1.png 1x, ./img/category-img-1@2x.png 2x" type="image/png" />
+													<img loading="lazy" src="./img/category-img-1.png" alt="Изображение категории инструменты" class="mega-menu__grid-cardImg" />
+												</picture>
+												<div class="mega-menu__grid-cardName">Инструменты (1251)</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li class="mega-menu__grid-item">
+									<div class="mega-menu__grid-card">
+										<a title="Инструменты" href="#!" class="mega-menu__grid-cardLink">
+											<div class="mega-menu__grid-cardContent">
+												<picture>
+													<source srcset="./img/category-img-1.webp 1x, ./img/category-img-1@2x.webp 2x" type="image/webp" />
+													<source srcset="./img/category-img-1.png 1x, ./img/category-img-1@2x.png 2x" type="image/png" />
+													<img loading="lazy" src="./img/category-img-1.png" alt="Изображение категории инструменты" class="mega-menu__grid-cardImg" />
+												</picture>
+												<div class="mega-menu__grid-cardName">Инструменты (1251)</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li class="mega-menu__grid-item">
+									<div class="mega-menu__grid-card">
+										<a title="Инструменты" href="#!" class="mega-menu__grid-cardLink">
+											<div class="mega-menu__grid-cardContent">
+												<picture>
+													<source srcset="./img/category-img-1.webp 1x, ./img/category-img-1@2x.webp 2x" type="image/webp" />
+													<source srcset="./img/category-img-1.png 1x, ./img/category-img-1@2x.png 2x" type="image/png" />
+													<img loading="lazy" src="./img/category-img-1.png" alt="Изображение категории инструменты" class="mega-menu__grid-cardImg" />
+												</picture>
+												<div class="mega-menu__grid-cardName">Инструменты (1251)</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li class="mega-menu__grid-item">
+									<div class="mega-menu__grid-card">
+										<a title="Инструменты" href="#!" class="mega-menu__grid-cardLink">
+											<div class="mega-menu__grid-cardContent">
+												<picture>
+													<source srcset="./img/category-img-1.webp 1x, ./img/category-img-1@2x.webp 2x" type="image/webp" />
+													<source srcset="./img/category-img-1.png 1x, ./img/category-img-1@2x.png 2x" type="image/png" />
+													<img loading="lazy" src="./img/category-img-1.png" alt="Изображение категории инструменты" class="mega-menu__grid-cardImg" />
+												</picture>
+												<div class="mega-menu__grid-cardName">Инструменты (1251)</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li class="mega-menu__grid-item">
+									<div class="mega-menu__grid-card">
+										<a title="Инструменты" href="#!" class="mega-menu__grid-cardLink">
+											<div class="mega-menu__grid-cardContent">
+												<picture>
+													<source srcset="./img/category-img-1.webp 1x, ./img/category-img-1@2x.webp 2x" type="image/webp" />
+													<source srcset="./img/category-img-1.png 1x, ./img/category-img-1@2x.png 2x" type="image/png" />
+													<img loading="lazy" src="./img/category-img-1.png" alt="Изображение категории инструменты" class="mega-menu__grid-cardImg" />
+												</picture>
+												<div class="mega-menu__grid-cardName">Инструменты (1251)</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li class="mega-menu__grid-item">
+									<div class="mega-menu__grid-card">
+										<a title="Инструменты" href="#!" class="mega-menu__grid-cardLink">
+											<div class="mega-menu__grid-cardContent">
+												<picture>
+													<source srcset="./img/category-img-1.webp 1x, ./img/category-img-1@2x.webp 2x" type="image/webp" />
+													<source srcset="./img/category-img-1.png 1x, ./img/category-img-1@2x.png 2x" type="image/png" />
+													<img loading="lazy" src="./img/category-img-1.png" alt="Изображение категории инструменты" class="mega-menu__grid-cardImg" />
+												</picture>
+												<div class="mega-menu__grid-cardName">Инструменты (1251)</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li class="mega-menu__grid-item">
+									<div class="mega-menu__grid-card">
+										<a title="Инструменты" href="#!" class="mega-menu__grid-cardLink">
+											<div class="mega-menu__grid-cardContent">
+												<picture>
+													<source srcset="./img/category-img-1.webp 1x, ./img/category-img-1@2x.webp 2x" type="image/webp" />
+													<source srcset="./img/category-img-1.png 1x, ./img/category-img-1@2x.png 2x" type="image/png" />
+													<img loading="lazy" src="./img/category-img-1.png" alt="Изображение категории инструменты" class="mega-menu__grid-cardImg" />
+												</picture>
+												<div class="mega-menu__grid-cardName">Инструменты (1251)</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li class="mega-menu__grid-item">
+									<div class="mega-menu__grid-card">
+										<a title="Инструменты" href="#!" class="mega-menu__grid-cardLink">
+											<div class="mega-menu__grid-cardContent">
+												<picture>
+													<source srcset="./img/category-img-1.webp 1x, ./img/category-img-1@2x.webp 2x" type="image/webp" />
+													<source srcset="./img/category-img-1.png 1x, ./img/category-img-1@2x.png 2x" type="image/png" />
+													<img loading="lazy" src="./img/category-img-1.png" alt="Изображение категории инструменты" class="mega-menu__grid-cardImg" />
+												</picture>
+												<div class="mega-menu__grid-cardName">Инструменты (1251)</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li class="mega-menu__grid-item">
+									<div class="mega-menu__grid-card">
+										<a title="Инструменты" href="#!" class="mega-menu__grid-cardLink">
+											<div class="mega-menu__grid-cardContent">
+												<picture>
+													<source srcset="./img/category-img-1.webp 1x, ./img/category-img-1@2x.webp 2x" type="image/webp" />
+													<source srcset="./img/category-img-1.png 1x, ./img/category-img-1@2x.png 2x" type="image/png" />
+													<img loading="lazy" src="./img/category-img-1.png" alt="Изображение категории инструменты" class="mega-menu__grid-cardImg" />
+												</picture>
+												<div class="mega-menu__grid-cardName">Инструменты (1251)</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<!-- конец карточки категории -->
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -104,7 +247,335 @@
 		<div class="website__layout">
 			<main class="website__main main" id="main">
 				<div class="main__wrapper">
-					Контент сайта
+					<section class="banner" id="banner">
+						<div class="container banner__container">
+							<div class="banner__slider swiper">
+								<!-- Слайдер -->
+								<div class="banner__slider-wrapper swiper-wrapper">
+									<!-- Начало слайда -->
+									<div class="banner__slider-slide swiper-slide">
+										<div class="banner__slider-slideContent">
+											<h2 class="banner__slider-slideTitle">КАЧЕСТВЕННЫЕ ТОВАРЫ ПО&#160;НИЗКИМ ЦЕНАМ В&#160;УФЕ!</h2>
+											<ul class="banner__slider-slideList slider-list">
+												<!-- Начало товара -->
+												<li class="slider-list__item">
+													<div class="slider-list__card">
+														<a href="#!" title="Смесители" class="slider-list__card-link">
+															<div class="slider-list__card-content">
+																<div class="slider-list__card-name">Смесители</div>
+																<picture>
+																	<source srcset="./img/slider-img-1.webp 1x, ./img/slider-img-1@2x.webp 2x" type="image/webp" />
+																	<source srcset="./img/slider-img-1.png 1x, ./img/slider-img-1@2x.png 2x" type="image/png" />
+																	<img loading="lazy" src="./img/slider-img-1.png" alt="Изображение смесителя" class="slider-list__card-img" />
+																</picture>
+																<div class="slider-list__card-price">от&#160;1480&#160;руб.</div>
+															</div>
+														</a>
+													</div>
+												</li>
+												<!-- Конец товара -->
+												<!-- Начало товара -->
+												<li class="slider-list__item">
+													<div class="slider-list__card">
+														<a href="#!" title="Смесители" class="slider-list__card-link">
+															<div class="slider-list__card-content">
+																<div class="slider-list__card-name">Туристические рюкзаки</div>
+																<picture>
+																	<source srcset="./img/slider-img-2.webp 1x, ./img/slider-img-2@2x.webp 2x" type="image/webp" />
+																	<source srcset="./img/slider-img-2.png 1x, ./img/slider-img-2@2x.png 2x" type="image/png" />
+																	<img loading="lazy" src="./img/slider-img-2.png" alt="Изображение смесителя" class="slider-list__card-img" />
+																</picture>
+																<div class="slider-list__card-price">от&#160;1290&#160;руб.</div>
+															</div>
+														</a>
+													</div>
+												</li>
+												<!-- Конец товара -->
+												<!-- Начало товара -->
+												<li class="slider-list__item">
+													<div class="slider-list__card">
+														<a href="#!" title="Смесители" class="slider-list__card-link">
+															<div class="slider-list__card-content">
+																<div class="slider-list__card-name">Дачные фонарики</div>
+																<picture>
+																	<source srcset="./img/slider-img-3.webp 1x, ./img/slider-img-3@2x.webp 2x" type="image/webp" />
+																	<source srcset="./img/slider-img-3.png 1x, ./img/slider-img-3@2x.png 2x" type="image/png" />
+																	<img loading="lazy" src="./img/slider-img-3.png" alt="Изображение смесителя" class="slider-list__card-img" />
+																</picture>
+																<div class="slider-list__card-price">от&#160;890&#160;руб.</div>
+															</div>
+														</a>
+													</div>
+												</li>
+												<!-- Конец товара -->
+												<!-- Начало товара -->
+												<li class="slider-list__item">
+													<div class="slider-list__card">
+														<a href="#!" title="Смесители" class="slider-list__card-link">
+															<div class="slider-list__card-content">
+																<div class="slider-list__card-name">Шуруповерты</div>
+																<picture>
+																	<source srcset="./img/slider-img-4.webp 1x, ./img/slider-img-4@2x.webp 2x" type="image/webp" />
+																	<source srcset="./img/slider-img-4.png 1x, ./img/slider-img-4@2x.png 2x" type="image/png" />
+																	<img loading="lazy" src="./img/slider-img-4.png" alt="Изображение смесителя" class="slider-list__card-img" />
+																</picture>
+																<div class="slider-list__card-price">от&#160;1100&#160;руб.</div>
+															</div>
+														</a>
+													</div>
+												</li>
+												<!-- Конец товара -->
+											</ul>
+										</div>
+									</div>
+									<div class="banner__slider-slide swiper-slide">
+										<div class="banner__slider-slideContent">
+											<h2 class="banner__slider-slideTitle">КАЧЕСТВЕННЫЕ ТОВАРЫ ПО&#160;НИЗКИМ ЦЕНАМ В&#160;УФЕ!</h2>
+											<ul class="banner__slider-slideList slider-list">
+												<!-- Начало товара -->
+												<li class="slider-list__item">
+													<div class="slider-list__card">
+														<a href="#!" title="Смесители" class="slider-list__card-link">
+															<div class="slider-list__card-content">
+																<div class="slider-list__card-name">Смесители</div>
+																<picture>
+																	<source srcset="./img/slider-img-1.webp 1x, ./img/slider-img-1@2x.webp 2x" type="image/webp" />
+																	<source srcset="./img/slider-img-1.png 1x, ./img/slider-img-1@2x.png 2x" type="image/png" />
+																	<img loading="lazy" src="./img/slider-img-1.png" alt="Изображение смесителя" class="slider-list__card-img" />
+																</picture>
+																<div class="slider-list__card-price">от&#160;1480&#160;руб.</div>
+															</div>
+														</a>
+													</div>
+												</li>
+												<!-- Конец товара -->
+												<!-- Начало товара -->
+												<li class="slider-list__item">
+													<div class="slider-list__card">
+														<a href="#!" title="Смесители" class="slider-list__card-link">
+															<div class="slider-list__card-content">
+																<div class="slider-list__card-name">Туристические рюкзаки</div>
+																<picture>
+																	<source srcset="./img/slider-img-2.webp 1x, ./img/slider-img-2@2x.webp 2x" type="image/webp" />
+																	<source srcset="./img/slider-img-2.png 1x, ./img/slider-img-2@2x.png 2x" type="image/png" />
+																	<img loading="lazy" src="./img/slider-img-2.png" alt="Изображение смесителя" class="slider-list__card-img" />
+																</picture>
+																<div class="slider-list__card-price">от&#160;1290&#160;руб.</div>
+															</div>
+														</a>
+													</div>
+												</li>
+												<!-- Конец товара -->
+												<!-- Начало товара -->
+												<li class="slider-list__item">
+													<div class="slider-list__card">
+														<a href="#!" title="Смесители" class="slider-list__card-link">
+															<div class="slider-list__card-content">
+																<div class="slider-list__card-name">Дачные фонарики</div>
+																<picture>
+																	<source srcset="./img/slider-img-3.webp 1x, ./img/slider-img-3@2x.webp 2x" type="image/webp" />
+																	<source srcset="./img/slider-img-3.png 1x, ./img/slider-img-3@2x.png 2x" type="image/png" />
+																	<img loading="lazy" src="./img/slider-img-3.png" alt="Изображение смесителя" class="slider-list__card-img" />
+																</picture>
+																<div class="slider-list__card-price">от&#160;890&#160;руб.</div>
+															</div>
+														</a>
+													</div>
+												</li>
+												<!-- Конец товара -->
+												<!-- Начало товара -->
+												<li class="slider-list__item">
+													<div class="slider-list__card">
+														<a href="#!" title="Смесители" class="slider-list__card-link">
+															<div class="slider-list__card-content">
+																<div class="slider-list__card-name">Шуруповерты</div>
+																<picture>
+																	<source srcset="./img/slider-img-4.webp 1x, ./img/slider-img-4@2x.webp 2x" type="image/webp" />
+																	<source srcset="./img/slider-img-4.png 1x, ./img/slider-img-4@2x.png 2x" type="image/png" />
+																	<img loading="lazy" src="./img/slider-img-4.png" alt="Изображение смесителя" class="slider-list__card-img" />
+																</picture>
+																<div class="slider-list__card-price">от&#160;1100&#160;руб.</div>
+															</div>
+														</a>
+													</div>
+												</li>
+												<!-- Конец товара -->
+											</ul>
+										</div>
+									</div>
+									<!-- Конец слайда -->
+								</div>
+								<!-- Кнопки переключения слайда -->
+								<button class="banner__slider-btn banner__slider-btn--prev">
+									<i class="ri-arrow-left-s-line"></i>
+								</button>
+								<button class="banner__slider-btn banner__slider-btn--next">
+									<i class="ri-arrow-right-s-line"></i>
+								</button>
+							</div>
+						</div>
+					</section>
+					<section class="pluses">
+						<div class="container pluses__container">
+							<ul class="pluses__list">
+								<li class="pluses__item">
+									<svg class="pluses__icon icon icon--example">
+										<use href="./img/svgsprite/sprite.symbol.svg#cart-pluses"></use>
+									</svg>
+									<span class="pluses__text">Большой асортимент и&#160;выбор товаров</span>
+								</li>
+								<li class="pluses__item">
+									<svg class="pluses__icon icon icon--example">
+										<use href="./img/svgsprite/sprite.symbol.svg#wallet"></use>
+									</svg>
+									<span class="pluses__text">Низкие цены на&#160;всю продукцию</span>
+								</li>
+								<li class="pluses__item">
+									<svg class="pluses__icon icon icon--example">
+										<use href="./img/svgsprite/sprite.symbol.svg#gear"></use>
+									</svg>
+									<span class="pluses__text">Работаем напрямую с&#160;производителями</span>
+								</li>
+								<li class="pluses__item">
+									<svg class="pluses__icon icon icon--example">
+										<use href="./img/svgsprite/sprite.symbol.svg#guarantees"></use>
+									</svg>
+									<span class="pluses__text">Гарантия на&#160;все товары</span>
+								</li>
+								<li class="pluses__item">
+									<svg class="pluses__icon icon icon--example">
+										<use href="./img/svgsprite/sprite.symbol.svg#delivery"></use>
+									</svg>
+									<span class="pluses__text">Быстрая доставка товаров по&#160;Уфе на&#160;дом</span>
+								</li>
+								<li class="pluses__item">
+									<svg class="pluses__icon icon icon--example">
+										<use href="./img/svgsprite/sprite.symbol.svg#quality"></use>
+									</svg>
+									<span class="pluses__text">Предлогаем только качественные товары</span>
+								</li>
+							</ul>
+						</div>
+					</section>
+					<section class="catalog">
+						<div class="container catalog__container">
+							<h2 class="catalog__title">Каталог товаров</h2>
+							<ul class="catalog__list">
+								<li class="catalog__item">
+									<picture>
+										<source srcset="./img/bolgarka.webp 1x, ./img/bolgarka@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/bolgarka.png 1x, ./img/bolgarka@2x.png 2x" type="image/png" />
+										<img src="./img/bolgarka.png" alt="" class="catalog__item-image" />
+									</picture>
+									<span class="catalog__item-text">Инструменты</span>
+								</li>
+								<li class="catalog__item">
+									<picture>
+										<source srcset="./img/santehnika.webp 1x, ./img/santehnika@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/santehnika.png 1x, ./img/santehnika@2x.png 2x" type="image/png" />
+										<img src="./img/santehnika.png" alt="" class="catalog__item-image" />
+									</picture>
+									<span class="catalog__item-text">Инструменты</span>
+								</li>
+								<li class="catalog__item">
+									<picture>
+										<source srcset="./img/electrika.webp 1x, ./img/electrika@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/electrika.png 1x, ./img/electrika@2x.png 2x" type="image/png" />
+										<img src="./img/electrika.png" alt="" class="catalog__item-image" />
+									</picture>
+									<span class="catalog__item-text">Инструменты</span>
+								</li>
+								<li class="catalog__item">
+									<picture>
+										<source srcset="./img/fishing.webp 1x, ./img/fishing@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/fishing.png 1x, ./img/fishing@2x.png 2x" type="image/png" />
+										<img src="./img/fishing.png" alt="" class="catalog__item-image" />
+									</picture>
+									<span class="catalog__item-text">Инструменты</span>
+								</li>
+								<li class="catalog__item">
+									<picture>
+										<source srcset="./img/for-home.webp 1x, ./img/for-home@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/for-home.png 1x, ./img/for-home@2x.png 2x" type="image/png" />
+										<img src="./img/for-home.png" alt="" class="catalog__item-image" />
+									</picture>
+									<span class="catalog__item-text">Инструменты</span>
+								</li>
+								<li class="catalog__item">
+									<picture>
+										<source srcset="./img/materials.webp 1x, ./img/materials@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/materials.png 1x, ./img/materials@2x.png 2x" type="image/png" />
+										<img src="./img/materials.png" alt="" class="catalog__item-image" />
+									</picture>
+									<span class="catalog__item-text">Инструменты</span>
+								</li>
+								<li class="catalog__item">
+									<picture>
+										<source srcset="./img/krepezh.webp 1x, ./img/krepezh@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/krepezh.png 1x, ./img/krepezh@2x.png 2x" type="image/png" />
+										<img src="./img/krepezh.png" alt="" class="catalog__item-image" />
+									</picture>
+									<span class="catalog__item-text">Инструменты</span>
+								</li>
+								<li class="catalog__item">
+									<picture>
+										<source srcset="./img/garden.webp 1x, ./img/garden@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/garden.png 1x, ./img/garden@2x.png 2x" type="image/png" />
+										<img src="./img/garden.png" alt="" class="catalog__item-image" />
+									</picture>
+									<span class="catalog__item-text">Инструменты</span>
+								</li>
+								<li class="catalog__item">
+									<picture>
+										<source srcset="./img/water-s.webp 1x, ./img/water-s@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/water-s.png 1x, ./img/water-s@2x.png 2x" type="image/png" />
+										<img src="./img/water-s.png" alt="" class="catalog__item-image" />
+									</picture>
+									<span class="catalog__item-text">Инструменты</span>
+								</li>
+								<li class="catalog__item">
+									<picture>
+										<source srcset="./img/bitovaya.webp 1x, ./img/bitovaya@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/bitovaya.png 1x, ./img/bitovaya@2x.png 2x" type="image/png" />
+										<img src="./img/bitovaya.png" alt="" class="catalog__item-image" />
+									</picture>
+									<span class="catalog__item-text">Инструменты</span>
+								</li>
+								<li class="catalog__item">
+									<picture>
+										<source srcset="./img/for-childrenishi.webp 1x, ./img/for-childrenishi@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/for-childrenishi.png 1x, ./img/for-childrenishi@2x.png 2x" type="image/png" />
+										<img src="./img/for-childrenishi.png" alt="" class="catalog__item-image" />
+									</picture>
+									<span class="catalog__item-text">Инструменты</span>
+								</li>
+								<li class="catalog__item">
+									<picture>
+										<source srcset="./img/sport.webp 1x, ./img/sport@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/sport.png 1x, ./img/sport@2x.png 2x" type="image/png" />
+										<img src="./img/sport.png" alt="" class="catalog__item-image" />
+									</picture>
+									<span class="catalog__item-text">Инструменты</span>
+								</li>
+								<li class="catalog__item">
+									<picture>
+										<source srcset="./img/mega-tovar.webp 1x, ./img/mega-tovar@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/mega-tovar.png 1x, ./img/mega-tovar@2x.png 2x" type="image/png" />
+										<img src="./img/mega-tovar.png" alt="" class="catalog__item-image" />
+									</picture>
+									<span class="catalog__item-text">Инструменты</span>
+								</li>
+								<li class="catalog__item">
+									<picture>
+										<source srcset="./img/avto.webp 1x, ./img/avto@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/avto.png 1x, ./img/avto@2x.png 2x" type="image/png" />
+										<img src="./img/avto.png" alt="" class="catalog__item-image" />
+									</picture>
+									<span class="catalog__item-text">Инструменты</span>
+								</li>
+							</ul>
+						</div>
+					</section>
 				</div>
 			</main>
 		</div>
