@@ -1,0 +1,119 @@
+.popular-section{
+    &__title{
+        text-align: center;
+        font-size: 24px;
+    }
+    &__content{
+        position: relative;
+    }
+    &__slider{
+        position: relative;
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 25px;
+        margin-bottom: 90px;
+    }
+    &__item{
+        position: relative;
+        padding: 25px 7px 15px 7px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:hover .popular-section__item-footer{
+            opacity: 1;
+        }
+        &-info{
+            border-top: 1px solid var(--color-border);
+            margin: 25px 0 0 0;
+            padding: 10px 0 0 0;
+        }
+        &-list{
+            display: flex;
+            justify-content: space-between;
+        }
+        &-item{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        &-name{
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--color-item-name);
+        }
+        &-count{
+            color: var(--color-item-count);
+            font-size: 14px;
+            font-weight: 500;
+        }
+        &-title{
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--color-item-count);
+            text-align: center;
+        }
+        &-cost{
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--color-item-count);
+        }
+        &-footer{
+            position: absolute;
+            top: calc(100%);
+            width: 100%;
+            opacity: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    &__count{
+        display: flex;
+        width: 100%;
+        &-input{
+            width: 65px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            border-block: 1px solid var(--color-border);
+        }
+        &-button{
+            padding: 7px;
+            font-size: 25px;
+            background-color: var(--color-background-button);
+            border: 1px solid var(--color-border);
+        }
+    }
+    &__add-to-cart{
+        padding: 10px 15px;
+        background-color: var(--color-primary);
+        color: var(--color-background);
+        font-size: 20px;
+    }
+    &__slider-button{
+        position: absolute;
+        --size: 42px;
+        width: var(--size);
+        height: var(--size);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 2px solid var(--color-border);
+        font-size: 25px;
+        bottom: 50%;
+        &--prev{
+            right: calc(100% + 10px);
+        }
+        &--next{
+            left: calc(100% + 10px);
+        }
+    }
+}
