@@ -2,7 +2,7 @@ import Swiper from 'swiper/bundle'
 import 'swiper/css/bundle'
 
 function bannerSlider(){
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('.banner__slider', {
         loop: true,
         slidesPerView: 1,
         autoplay: {

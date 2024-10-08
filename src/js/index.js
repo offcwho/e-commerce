@@ -4,3 +4,6 @@ megaMenu();
 // Вызов функции для работы слайдера
 import bannerSlider from './modules/banner.js';
 bannerSlider();
+
+import popularSlider from './modules/slider.js';
+popularSlider()
